@@ -1,0 +1,32 @@
+Ì∫Ä Como rodar o projeto Os Melhores do Transporte
+
+1) Abrir o VS Code
+2) Abrir o terminal do VS Code (Menu > Terminal > Novo Terminal)
+
+=================================
+Ì≥å PRIMEIRA VEZ NESTE COMPUTADOR
+=================================
+
+cd Desktop
+git clone https://github.com/silvagoncalvesosvaldo-lab/melhores-transporte-react.git
+cd melhores-transporte-react
+npm install
+npm run dev
+
+Abra no navegador o endere√ßo que aparecer (geralmente http://localhost:5173)
+
+=================================
+Ì≥å DIAS SEGUINTES (j√° clonado)
+=================================
+
+cd Desktop/melhores-transporte-react
+npm install   # s√≥ se tiver pacotes novos
+npm run dev
+
+=================================
+Ì≥å SALVAR NO GITHUB
+=================================
+
+git add .
+git commit -m "Descri√ß√£o do que foi alterado"
+git push origin main
