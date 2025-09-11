@@ -1,16 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import CadastroCliente from "./pages/CadastroCliente";
-import Logo from "./Logo";
+import Transportador from "./pages/Transportador";
+import Afiliado from "./pages/Afiliado";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
-        {/* Página inicial com os botões */}
-        <Route path="/" element={<Logo />} />
-
-        {/* Página de cadastro do Cliente/Embarcador */}
-        <Route path="/cadastro-cliente" element={<CadastroCliente />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/cliente" element={<CadastroCliente />} />
+        <Route path="/transportador" element={<Transportador />} />
+        <Route path="/afiliado" element={<Afiliado />} />
       </Routes>
     </Router>
   );

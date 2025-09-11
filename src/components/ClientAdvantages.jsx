@@ -35,7 +35,7 @@ export default function ClientAdvantages() {
   return (
     <section className="bg-[#0f172a] text-white py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4 text-green-400">Vantagens para Clientes</h2>
+        <h2 className="text-3xl font-bold mb-4 text-green-400">Vantagens para Clientes/Embarcadores</h2>
         <p className="text-lg text-gray-300 mb-10">
           Contrate com segurança, ganhe recompensas e tenha a melhor experiência de transporte.
         </p>

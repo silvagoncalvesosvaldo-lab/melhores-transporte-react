@@ -40,7 +40,7 @@ const ClientBenefits = () => {
     <section className="py-16 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4">
-          Vantagens para <span className="text-blue-500">Clientes</span>
+          Vantagens para <span className="text-blue-500">Clientes/Embarcadores</span>
         </h2>
         <p className="text-center text-gray-300 mb-12">
           Contrate com segurança, ganhe recompensas e tenha a melhor experiência de transporte.

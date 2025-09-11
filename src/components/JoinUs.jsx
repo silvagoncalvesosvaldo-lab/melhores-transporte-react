@@ -14,10 +14,10 @@ const JoinUs = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Cliente */}
+          {/* Cliente/Embarcador */}
           <div className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition text-center">
             <Briefcase className="mx-auto mb-4 text-blue-400" size={40} />
-            <h3 className="text-xl font-semibold mb-2">Sou Cliente</h3>
+            <h3 className="text-xl font-semibold mb-2">Sou Cliente/Embarcador</h3>
             <p className="text-gray-400 mb-4">
               Preciso de um transporte seguro e eficiente para minha carga.
             </p>
@@ -25,7 +25,7 @@ const JoinUs = () => {
               href="#cadastro-cliente"
               className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition"
             >
-              Cadastrar como Cliente
+              Cadastrar como Cliente/Embarcador
             </a>
           </div>
 
