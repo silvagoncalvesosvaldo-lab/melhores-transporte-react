@@ -1,22 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CadastroCliente from "./pages/CadastroCliente";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 import Transportador from "./pages/Transportador";
 import Afiliado from "./pages/Afiliado";
-import Header from "./components/Header";
+import CadastroCliente from "./pages/CadastroCliente";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Header />
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cliente" element={<CadastroCliente />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/transportador" element={<Transportador />} />
         <Route path="/afiliado" element={<Afiliado />} />
+        <Route path="/cliente" element={<CadastroCliente />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-export default App;
