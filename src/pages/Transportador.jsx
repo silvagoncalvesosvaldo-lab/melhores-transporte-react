@@ -13,29 +13,78 @@ export default function Transportador() {
     agencia: "",
     conta: "",
     pix: "",
-    comprovanteResidencia: null,
-    fotoTransportador: null,
-    fotoFrenteVeiculo: null,
-    fotoTraseiraVeiculo: null,
-    documentoVeiculo: null,
-    cnh: null,
-    rg: null,
-    cpf: null,
-    outrosDocs: null,
   });
 
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: files ? files[0] : value,
+      [name]: value,
     });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.nome || formData.nome.length < 3) {
+      newErrors.nome = "Nome completo deve ter pelo menos 3 caracteres.";
+    }
+
+    if (!formData.whatsapp || !/^[0-9]{10,}$/.test(formData.whatsapp)) {
+      newErrors.whatsapp =
+        "Informe um WhatsApp válido (somente números, mínimo 10 dígitos).";
+    }
+
+    if (
+      !formData.email ||
+      !/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)
+    ) {
+      newErrors.email = "Informe um e-mail válido.";
+    }
+
+    if (!formData.endereco) newErrors.endereco = "Endereço atual é obrigatório.";
+    if (!formData.antt) newErrors.antt = "Número da ANTT é obrigatório.";
+    if (!formData.renavam) newErrors.renavam = "Número do Renavam é obrigatório.";
+    if (!formData.placa) newErrors.placa = "Placa do veículo é obrigatória.";
+    if (!formData.banco) newErrors.banco = "Banco é obrigatório.";
+    if (!formData.agencia) newErrors.agencia = "Agência é obrigatória.";
+    if (!formData.conta) newErrors.conta = "Número da conta é obrigatório.";
+    if (!formData.pix) newErrors.pix = "Chave Pix é obrigatória.";
+
+    return newErrors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Formulário enviado:", formData);
-    alert("Cadastro enviado com sucesso!");
+    setSubmitted(true);
+    const validationErrors = validate();
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; // ��� Bloqueia o envio se houver erros
+    }
+
+    setErrors({});
+    console.log("Formulário Transportador enviado:", formData);
+    alert("Cadastro de Transportador enviado com sucesso!");
+
+    setFormData({
+      nome: "",
+      whatsapp: "",
+      email: "",
+      endereco: "",
+      antt: "",
+      renavam: "",
+      placa: "",
+      banco: "",
+      agencia: "",
+      conta: "",
+      pix: "",
+    });
+    setSubmitted(false);
   };
 
   return (
@@ -50,210 +99,91 @@ export default function Transportador() {
 
         <p className="text-sm text-gray-500 mb-2">Campos Obrigatórios</p>
 
-        {/* Dados pessoais */}
         <div className="grid grid-cols-1 gap-4">
-          <input
-            type="text"
-            name="nome"
-            placeholder="Nome Completo *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="whatsapp"
-            placeholder="Whatsapp *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="endereco"
-            placeholder="Endereço Atual *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="antt"
-            placeholder="Número da ANTT *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="renavam"
-            placeholder="Número do Renavam *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="placa"
-            placeholder="Placa do Veículo *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="banco"
-            placeholder="Banco *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="agencia"
-            placeholder="Agência *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="conta"
-            placeholder="Número da Conta *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
-          <input
-            type="text"
-            name="pix"
-            placeholder="Chave Pix *"
-            required
-            onChange={handleChange}
-            className="border p-2 rounded"
-          />
+          {[
+            { name: "nome", placeholder: "Nome Completo *" },
+            { name: "whatsapp", placeholder: "Whatsapp *" },
+            { name: "email", placeholder: "E-mail *" },
+            { name: "endereco", placeholder: "Endereço Atual *" },
+            { name: "antt", placeholder: "Número da ANTT *" },
+            { name: "renavam", placeholder: "Número do Renavam *" },
+            { name: "placa", placeholder: "Placa do Veículo *" },
+            { name: "banco", placeholder: "Banco *" },
+            { name: "agencia", placeholder: "Agência *" },
+            { name: "conta", placeholder: "Número da Conta *" },
+            { name: "pix", placeholder: "Chave Pix *" },
+          ].map((field) => (
+            <div key={field.name}>
+              <input
+                type={field.name === "email" ? "email" : "text"}
+                name={field.name}
+                placeholder={field.placeholder}
+                value={formData[field.name]}
+                onChange={handleChange}
+                className="border p-2 rounded w-full"
+                required
+              />
+              {submitted && errors[field.name] && (
+                <p className="text-red-600 text-sm">{errors[field.name]}</p>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Documentos Obrigatórios */}
-        <h3 className="mt-6 font-semibold text-gray-700">
-          Documentos Obrigatórios
-        </h3>
-        <div className="grid grid-cols-1 gap-4 mt-2">
-          <label className="text-sm font-medium">
-            Comprovante de Residência *
-            <input
-              type="file"
-              name="comprovanteResidencia"
-              required
-              onChange={handleChange}
-              className="block mt-1"
-            />
+        {/* Uploads obrigatórios */}
+        <div className="mt-6">
+          <label className="block font-semibold">
+            Comprovante de Residência (Obrigatório)
           </label>
+          <input type="file" className="border p-2 rounded w-full" required />
 
-          <label className="text-sm font-medium">
-            Foto do Transportador *
-            <input
-              type="file"
-              name="fotoTransportador"
-              required
-              onChange={handleChange}
-              className="block mt-1"
-            />
+          <label className="block font-semibold mt-4">
+            Foto do Transportador (Obrigatório)
           </label>
+          <input type="file" className="border p-2 rounded w-full" required />
 
-          <label className="text-sm font-medium">
-            Foto do Veículo - Frente (Placa visível) *
-            <input
-              type="file"
-              name="fotoFrenteVeiculo"
-              required
-              onChange={handleChange}
-              className="block mt-1"
-            />
+          <label className="block font-semibold mt-4">
+            Foto da Frente do Veículo (Placa visível - Obrigatório)
           </label>
+          <input type="file" className="border p-2 rounded w-full" required />
 
-          <label className="text-sm font-medium">
-            Foto do Veículo - Traseira (Placa visível) *
-            <input
-              type="file"
-              name="fotoTraseiraVeiculo"
-              required
-              onChange={handleChange}
-              className="block mt-1"
-            />
+          <label className="block font-semibold mt-4">
+            Foto da Traseira do Veículo (Placa visível - Obrigatório)
           </label>
+          <input type="file" className="border p-2 rounded w-full" required />
 
-          <label className="text-sm font-medium">
+          <label className="block font-semibold mt-4">
             Documento do Veículo (se arrendado/alugado) *
-            <span className="block text-xs text-gray-500">
-              Obrigatório apenas em caso de arrendamento, aluguel ou similares.
-            </span>
-            <input
-              type="file"
-              name="documentoVeiculo"
-              required
-              onChange={handleChange}
-              className="block mt-1"
-            />
           </label>
+          <p className="text-xs text-gray-500">
+            Obrigatório apenas em caso de arrendamento, aluguel ou similares
+            legalmente aceitos.
+          </p>
+          <input type="file" className="border p-2 rounded w-full" required />
         </div>
 
         {/* Documentos Opcionais */}
-        <h3 className="mt-6 font-semibold text-gray-700">
-          Documentos Opcionais:{" "}
-          <span className="text-sm font-normal text-gray-600">
-            (Se cadastrados abaixo, a plataforma usará somente para monitorar e
-            enviará alertas antecipados de vencimento, e no dia do vencimento).
-          </span>
-        </h3>
-        <div className="grid grid-cols-1 gap-4 mt-2">
-          <label className="text-sm font-medium">
-            CNH
-            <input
-              type="file"
-              name="cnh"
-              onChange={handleChange}
-              className="block mt-1"
-            />
-          </label>
+        <div className="mt-8">
+          <p className="font-semibold text-blue-700">
+            Documentos Opcionais:
+            <span className="text-gray-600 text-sm">
+              {" "}
+              (Se cadastrados abaixo, a plataforma usará somente para monitorar e
+              enviará alertas antecipados de vencimento, e no dia do vencimento).
+            </span>
+          </p>
 
-          <label className="text-sm font-medium">
-            RG
-            <input
-              type="file"
-              name="rg"
-              onChange={handleChange}
-              className="block mt-1"
-            />
-          </label>
+          <label className="block mt-4">CNH (Opcional)</label>
+          <input type="file" className="border p-2 rounded w-full" />
 
-          <label className="text-sm font-medium">
-            CPF
-            <input
-              type="file"
-              name="cpf"
-              onChange={handleChange}
-              className="block mt-1"
-            />
-          </label>
+          <label className="block mt-4">RG (Opcional)</label>
+          <input type="file" className="border p-2 rounded w-full" />
 
-          <label className="text-sm font-medium">
-            Outros Documentos
-            <input
-              type="file"
-              name="outrosDocs"
-              onChange={handleChange}
-              className="block mt-1"
-            />
-          </label>
+          <label className="block mt-4">CPF (Opcional)</label>
+          <input type="file" className="border p-2 rounded w-full" />
+
+          <label className="block mt-4">Outros Documentos (Opcional)</label>
+          <input type="file" className="border p-2 rounded w-full" />
         </div>
 
         {/* Botão */}
