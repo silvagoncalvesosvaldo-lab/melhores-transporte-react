@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function CadastroCliente/Embarcador() {
+function CadastroCliente() {
   const [tipoCarga, setTipoCarga] = useState("");
 
   return (
     <div className="max-w-5xl mx-auto bg-white p-6 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center">
-        Cadastro de Cliente/Embarcador
+        Cadastro de Cliente/Embarcador/Embarcador
       </h2>
       <form className="space-y-4">
 
@@ -15,10 +15,6 @@ function CadastroCliente/Embarcador() {
         <input type="text" placeholder="Whatsapp" className="w-full border p-2 rounded" />
         <input type="email" placeholder="E-mail" className="w-full border p-2 rounded" />
         <input type="text" placeholder="Endereço Atual" className="w-full border p-2 rounded" />
-        <label className="block">
-          Comprovante de Residência
-          <input type="file" className="w-full border p-2 rounded mt-1" />
-        </label>
         <input type="text" placeholder="Banco" className="w-full border p-2 rounded" />
         <input type="text" placeholder="Agência" className="w-full border p-2 rounded" />
         <input type="text" placeholder="Número da Conta" className="w-full border p-2 rounded" />
@@ -26,7 +22,7 @@ function CadastroCliente/Embarcador() {
 
         {/* Tipo de Carga */}
         <label className="block">
-          Selecione o tipo de carga que deseja cadastrar/anunciar:
+          Selecione o tipo de carga que deseja cadastrar/anunciar e responda o Formulário abaixo:
           <select
             className="w-full border p-2 rounded mt-1"
             value={tipoCarga}
@@ -82,7 +78,7 @@ function CadastroCliente/Embarcador() {
             </label>
 
             <label>
-              6- Em ambos os locais, os seus itens passam sem dificuldades por portas, corredores e todas as vias de circulação? Resposta "Sim" ou "Não"
+              6- Em ambos os locais, os seus itens passam sem dificuldades por portas, corredores e todas as vias de circulação? Resposta "Sim" ou "Não"       
               <div>
                 <input type="radio" name="dificuldades" value="Sim" /> Sim
                 <input type="radio" name="dificuldades" value="Não" className="ml-4" /> Não
@@ -106,7 +102,7 @@ function CadastroCliente/Embarcador() {
             </label>
 
             <label>
-              9- [Aviso: Não desmontamos e montamos qualquer tipo de móveis e ou outros.] - Precisa que seja feito o serviço de embalar e encaixotar copos, louças, talheres, quadros, retratos, roupas, calçados e outros. Resposta "Sim" ou "Não"
+              9- [Aviso: Caso seja necessário a Desmontagem e ou Montagem de qualquer tipo de móveis ou outros, serão combinados dentro da conversa, atravéz do Chat.] - Precisa que seja feito o serviço de embalar e encaixotar copos, louças, talheres, quadros, retratos, roupas, calçados e outros. Resposta "Sim" ou "Não"
               <div>
                 <input type="radio" name="embalar" value="Sim" /> Sim
                 <input type="radio" name="embalar" value="Não" className="ml-4" /> Não
@@ -128,7 +124,7 @@ function CadastroCliente/Embarcador() {
             </div>
 
             <label>
-              11- [Aviso: Não transportamos animais de qualquer espécie] - Precisa de caixas e outros materiais para embalagem? Resposta "Sim" ou "Não"
+              11- [Aviso: Caso seja necessário o transporte de animais, será combinados dentro da conversa, atravéz do Chat.] - Precisa de caixas e outros materiais para embalagem? Resposta "Sim" ou "Não"        
               <div>
                 <input type="radio" name="materiais" value="Sim" /> Sim
                 <input type="radio" name="materiais" value="Não" className="ml-4" /> Não
@@ -147,7 +143,7 @@ function CadastroCliente/Embarcador() {
               OBSERVAÇÃO: Por favor nos envie uma lista com todos os itens a serem transportados. Nessa lista nos envie NO MÍNIMO as medidas dos itens de maior altura, itens de maior largura, itens de maior comprimento. Caso seja possível nos envie um vídeo bem esclarecedor filmando todos os itens que deseja transportar.
             </p>
             <label>
-              Enviar vídeo:
+              Enviar vídeo (opcional):
               <input type="file" accept="video/*" className="w-full border p-2 rounded mt-1" />
             </label>
 
@@ -196,7 +192,8 @@ function CadastroCliente/Embarcador() {
 
             <h4 className="font-semibold mt-4">ATENÇÃO PARA OUTROS TIPOS DE CARGA:</h4>
             <textarea
-              placeholder="Descreva abaixo todos os dados dessa carga como volumetria, cubagem, peso total. Descrever tudo que é necessário para que o transportador saiba exetamente todas as caracteristicas dessa carga."
+              placeholder={`Descreva aqui todos os dados dessa carga como: volumetria, cubagem, peso total etc...
+Descrever aqui tudo que for necessário, para que o transportador saiba exatamente todas as caracteristicas dessa carga.`}
               className="w-full border p-3 rounded-lg"
             />
           </div>
@@ -210,4 +207,4 @@ function CadastroCliente/Embarcador() {
   );
 }
 
-export default CadastroCliente/Embarcador;
+export default CadastroCliente;
