@@ -5,13 +5,13 @@ const AffiliateBenefits = () => {
   const benefits = [
     {
       icon: Banknote,
-      title: "Pagamento Direto",
-      description: "Receba seus pagamentos diretamente em sua conta bancária, assim que finalizarem transportes feitos via seus links de divulgações.",
+      title: "Comissões por Transportes Realizados",
+      description: "Divulgue os seus links e ganhe comissões a cada transporte feito via seus links de divulgações.",
     },
     {
       icon: DollarSign,
-      title: "Comissões Atraentes",
-      description: "Ganhe comissões a cada indicação bem-sucedida, com ganhos recorrentes enquanto os usuários utilizarem a plataforma.",
+      title: "Pagamento Direto",
+      description: "Receba seus pagamentos diretamente em sua conta bancária.",
     },
     {
       icon: TrendingUp,
@@ -25,8 +25,8 @@ const AffiliateBenefits = () => {
     },
     {
       icon: Gift,
-      title: "Bônus Exclusivos",
-      description: "Receba prêmios extras e bonificações em campanhas e metas especiais para afiliados.",
+      title: "Plano de Fidelidade",
+      description: "Quanto mais transportes são realizados através de seus links, mais você poderá ganhar! Acumule transportes via suas indicações e desbloqueie Bônus em dinheiro na plataforma",
     },
     {
       icon: Shield,
