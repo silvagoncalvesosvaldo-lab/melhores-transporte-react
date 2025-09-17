@@ -21,7 +21,7 @@ export default function ClientAdvantages() {
     {
       title: "Plano de Fidelidade",
       description:
-        "Quanto mais vocÃª usa, mais vocÃª ganha! Acumule fretes e desbloqueie descontos progressivos nas taxas da plataforma.",
+        "Quanto mais Embarques realizados, mais vocÃª pode ganhar! Acumule embarques e desbloqueie BÃ´nus em dinheiro na plataforma.",
       icon: "í¾",
     },
     {
