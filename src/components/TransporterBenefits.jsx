@@ -17,7 +17,7 @@ const TransporterBenefits = () => {
       icon: <CheckCircle className="text-blue-500" size={32} />,
       title: "Avisos de Novas Cargas",
       description:
-        "Escolha os tipos de carga que deseja transportar, e receba avisos em seu e-mail ou WhatsApp assim que cadastrarem uma nova carga em nossa plataforma.",
+        "Escolha os tipos de Carga e os Estados que deseja transportar, e receba avisos em seu e-mail ou WhatsApp assim que cadastrarem uma nova carga em nossa plataforma.",
     },
     {
       icon: <Shield className="text-blue-500" size={32} />,
@@ -33,9 +33,9 @@ const TransporterBenefits = () => {
     },
     {
       icon: <Shield className="text-blue-500" size={32} />,
-      title: "Segurança e Profissionalismo",
+      title: "Plano de Fidelidade",
       description:
-        "Unimos transportadores a clientes confiáveis, reduzindo riscos e garantindo boas parcerias.",
+        "Quanto mais você realiza Transportes, mais poderá ganhar! Acumule transportes e desbloqueie Bônus em dinheiro na plataforma.",
     },
     {
       icon: <Headphones className="text-blue-500" size={32} />,
@@ -47,7 +47,7 @@ const TransporterBenefits = () => {
       icon: <Gift className="text-blue-500" size={32} />,
       title: "Programa de Afiliados",
       description:
-        "Ganhe ainda mais indicando motoristas e empresas de transporte para a plataforma.",
+        "Divulgue seus links e ganhe ainda mais indicando Motoristas, Empresas embarcadoras, Mudanças e outros tipos de cargas para a plataforma.",
     },
     {
       icon: <Fuel className="text-blue-500" size={32} />,
@@ -59,7 +59,7 @@ const TransporterBenefits = () => {
       icon: <FileText className="text-blue-500" size={32} />,
       title: "Gestão de Documentos",
       description:
-        "Envie e armazene documentos diretamente na plataforma de forma prática e segura.",
+        "Caso queira, preencha alguns campos com dados e nossa plataforma pode monitorar vencimentos de documentos, de forma prática e segura.",
     },
     {
       icon: <Star className="text-yellow-500" size={32} />,
