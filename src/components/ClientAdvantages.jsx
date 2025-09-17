@@ -27,7 +27,7 @@ export default function ClientAdvantages() {
     {
       title: "Indique e Ganhe",
       description:
-        "Convide seus amigos para a plataforma. Quando eles realizarem o primeiro frete, você ganha um bônus em dinheiro!",
+        "Indique a plataforma para Embarcadores, Transportadores e até para Mudanças. Quando eles concretizarem algum transportes via seus links, você ganha um bônus em dinheiro!",
       icon: "���",
     },
   ];
