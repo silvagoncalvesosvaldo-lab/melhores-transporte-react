@@ -3,6 +3,7 @@ import { CheckCircle, Package, Wrench } from "lucide-react";
 
 const WhyChooseUs = () => {
   const reasons = [
+  { title: "Embarcadores Idôneos e Respeitados", description: "Valorizamos embarcadores com idoneidade, renomados e respeitados no mercado. Quem anuncia suas cargas ou mudanças aqui fortalece sua credibilidade e garante negociações de alto nível.", icon: "✅" },
     {
       icon: <CheckCircle size={32} />,
       title: "Profissionais Verificados",
