@@ -27,12 +27,12 @@ const ClientBenefits = () => {
     {
       icon: <Gift className="w-10 h-10 text-blue-400" />,
       title: "Plano de Fidelidade",
-      description: "Quanto mais você usa, mais você ganha! Acumule fretes e desbloqueie descontos progressivos.",
+      description: "Quanto mais Embarques realizados, mais você pode ganhar! Acumule embarques realizados e desbloqueie Bônus em dinheiro na plataforma.",
     },
     {
       icon: <Shield className="w-10 h-10 text-blue-400" />,
       title: "Indique e Ganhe",
-      description: "Convide amigos para a plataforma e receba bônus quando eles realizarem o primeiro frete.",
+      description: "Divulgue a plataforma para Embarcadores, Transportadores e até para Mudanças, e receba bônus em dinheiro na sua conta Bancária, quando eles realizarem transportes via seus links de indicação.",
     },
   ];
 
