@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function LegalSecurity() {
+import React from "react";export default function LegalSecurity() {
   return (
     <section className="bg-gray-100 py-12 px-6 md:px-20">
       <div className="max-w-4xl mx-auto">
@@ -12,22 +10,12 @@ export default function LegalSecurity() {
           transportadores profissionais que atendam aos seguintes critérios
           rigorosos:
         </p>
-        <ul className="list-disc list-inside mb-6 text-gray-700">
-          <li>
-            <strong>ANTT:</strong> Registro Nacional de Transportadores
-            Rodoviários de Cargas ativo.
-          </li>
-          <li>
-            <strong>Renavam:</strong> Verificado para garantir a regularidade do
-            veículo.
-          </li>
-          <li>
-            <strong>Comprovante de residência:</strong> Exigido para confirmação
-            da origem do transportador.
-          </li>
-        </ul>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-800">
+<ul className="list-disc list-inside mb-6 text-gray-700">
+  <li><strong>CNH:</strong> Comprovar a habilitação.</li>
+  <li><strong>ANTT:</strong> Registro Nacional de Transportadores Rodoviários de Cargas ativo.</li>
+  <li><strong>Renavam:</strong> Verificado para garantir a regularidade do veículo.</li>
+  <li><strong>Comprovante de residência:</strong> Exigido para confirmação da origem do transportador.</li>
+</ul>        <h3 className="text-xl font-semibold mb-2 text-gray-800">
           Aviso de Responsabilidade
         </h3>
         <p className="mb-6 text-gray-700">
@@ -44,10 +32,13 @@ export default function LegalSecurity() {
           temos e não teremos nenhum tipo de responsabilidade sobre quaisquer
           tipo de danos Pessoais e Morais, que possam ocorrer a qualquer pessoa
           envolvida em qualquer transporte combinado e acertado dentro da nossa
-          plataforma.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-800">
+          plataforma. Deixamos claro também que a plataforma não se responsabiliza 
+          por qualquer tipo de Carga ou qualquer conteudo que as cargas possam ter, 
+          e sempre em qualquer momento, qualquer ocasião ou qualquer situação, 
+          essas responsabilidade citadas aqui e acima, serão sempre de 
+          responsabilidade do Clientes/Embarcadores ou do Motoristas/Transportadores 
+          e discutidas e acordadas entre e somente os mesmos.
+        </p>        <h3 className="text-xl font-semibold mb-2 text-gray-800">
           Sobre os Afiliados, Transportadores e Clientes/Embarcadores
         </h3>
         <p className="text-gray-700">
