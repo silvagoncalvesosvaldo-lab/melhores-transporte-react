@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
     {
       icon: <Wrench size={32} />,
       title: "Equipamentos Completos",
-      description: "De mantas a cintas, tudo para um transporte impecável.",
+      description: "De catracas, cintas e cordas a mantas, forros e outros materias, tudo para um transporte impecável.",
     },
   ];
 
@@ -27,7 +27,8 @@ const WhyChooseUs = () => {
           Por que somos a <span className="text-purple-400">escolha certa?</span>
         </h2>
         <p className="text-lg mb-12">
-          Nossos parceiros não são apenas transportadores. São artesãos do cuidado, dedicados a tratar
+         Além de todas as Vantagens e Benefícios acima citados à Clientes-Embarcadores, Motoristas-Transportadores e Afiliados-Divulgadores, sempre buscamos parcerias com 
+         Pessoas e Empresas que queiram desempenhar bons trabalhos e concretizar ótimos negócios. Nossos parceiros de transporte não são apenas transportadores. São artesãos do cuidado, dedicados a tratar
           seus bens como se fossem deles. Essa dedicação justifica um valor justo por um serviço de
           excelência.
         </p>
