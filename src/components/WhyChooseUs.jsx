@@ -33,11 +33,11 @@ const WhyChooseUs = () => {
           seus bens como se fossem deles. Essa dedicação justifica um valor justo por um serviço de
           excelência.
         </p>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-[#1b1f3b] p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+              className="bg-[#1b1f3b] p-4 rounded-lg shadow-md flex flex-col items-center text-center"
             >
               <div className="text-purple-400 mb-4">{reason.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{reason.title}</h3>
