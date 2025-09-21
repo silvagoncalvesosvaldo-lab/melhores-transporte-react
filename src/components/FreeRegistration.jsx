@@ -8,7 +8,7 @@ const FreeRegistration = () => {
           Cadastro Gratuito e Plataforma sem Mensalidade
         </h2>
         <p className="text-lg leading-relaxed">
-          Seja qual for a sua categoria – <strong>Transportador, Cliente/Embarcador ou Afiliado</strong> – 
+          Seja qual for a sua categoria – <strong>Transportador, Cliente ou Afiliado</strong> – 
           o cadastro é gratuito e o uso da plataforma é totalmente isento de mensalidade.
         </p>
       </div>

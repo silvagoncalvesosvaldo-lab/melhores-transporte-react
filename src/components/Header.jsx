@@ -7,7 +7,7 @@ export default function Header() {
       {/* Menu Central */}
       <nav className="flex space-x-6 text-gray-700 font-medium">
         <a href="#clientes" className="hover:text-blue-600">
-          Para Cliente/Embarcador/Embarcador
+          Para Cliente/Embarcador
         </a>
         <a href="#transportadores" className="hover:text-blue-600">
           Para Transportadores
